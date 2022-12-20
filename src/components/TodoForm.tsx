@@ -11,6 +11,12 @@ export const TodoForm: React.FC<TodoFormProps> = ({ addTodo }) => {
         setNewTodo(e.target.value);
       }
 
+      const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        addTodo(newTodo);
+        setNewTodo("");
+      }
+
   return (
     <div>TodoForm</div>
   )
