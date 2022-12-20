@@ -63,6 +63,7 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({
           todo.text
         )}
       </label>
+      <Dropdown options={dropdownOptions} />
     </li>
   );
 };
