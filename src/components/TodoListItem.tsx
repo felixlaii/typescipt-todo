@@ -25,6 +25,19 @@ export const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleComplete
         setInputText(text);
         editTodo(text);
       }
+    
+    const dropdownOptions: Array<Option> = [
+        {
+            value: "delete",
+            onClick: onDelete,
+            color: "red",
+        },
+        {
+            value: "edit",
+            onClick: onEdit,
+            color: "blue",
+        }
+    ]
 
   return (
     <div>TodoListItem</div>
