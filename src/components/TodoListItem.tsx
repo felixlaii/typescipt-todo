@@ -11,6 +11,15 @@ interface TodoListItemProps {
 export const TodoListItem: React.FC<TodoListItemProps> = ({ todo, toggleComplete, onRemoveTodo, editTodo }) => {
     const [isEditOn, setIsEditOn] = useState<boolean>(false);
     const [inputText, setInputText] = useState<string>(todo.text);
+
+    const onDelete = () => {
+        onRemoveTodo(todo);
+      }
+
+    const onEdit = () => {
+        console.log('edit');
+      }
+
   return (
     <div>TodoListItem</div>
   )
