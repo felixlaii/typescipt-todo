@@ -18,6 +18,15 @@ export const Dropdown: React.FC<DropdownItemProps> = ({ icon, options }) => {
       <div className="dropdown-title" onClick={toggleDropdown}>
         <BsThreeDotsVertical />
       </div>
+      {isOpen && <div className="dropdown-list-container">
+        {options.map((option: Option) => {
+          return(
+            <button onClick={option.value == "Edit" ? () => setIsOpen(false) : () => option.onClick()} className={`${option.color} dropdown-list-btn`}>
+              {option.value}
+            </button>
+          )
+        })}
+      </div>}
     </div>
-  );
-};
+  )
+}
