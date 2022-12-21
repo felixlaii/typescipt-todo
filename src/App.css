@@ -96,3 +96,7 @@ ul {
   border-radius: 20px;
   width: 80%;
 }
+
+.todo-row input {
+  margin-right: 10px;
+}
