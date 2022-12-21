@@ -21,6 +21,11 @@ function App() {
     }
   };
 
+  const removeTodo: RemoveTodo = todoToRemove => {
+    let updatedTodos: Array<Todo> = todos.filter(todo => todo.text != todoToRemove.text);
+    setTodos(updatedTodos);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
