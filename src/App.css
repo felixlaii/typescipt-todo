@@ -100,3 +100,10 @@ ul {
 .todo-row input {
   margin-right: 10px;
 }
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
