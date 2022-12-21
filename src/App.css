@@ -50,3 +50,12 @@ h1 {
   color: #fff;
   text-transform: capitalize;
 }
+
+.todo-input {
+  padding: 15px 32px 15px 16px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #dfe1e5;
+  outline: none;
+  width: 320px;
+  background: transparent;
+}
