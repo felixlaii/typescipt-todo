@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState<Array<Todo>>([]);
-  
+
   const toggleComplete: ToggleComplete = selectedTodo => {
     const updatedTodos = todos.map(todo => {
       if (todo === selectedTodo) {
@@ -13,6 +13,12 @@ function App() {
       return todo;
     });
     setTodos(updatedTodos);
+  };
+
+  const addTodo: AddTodo = newTodo => {
+    if (newTodo !== "") {
+      setTodos([...todos, { text: newTodo, complete: false }]);
+    }
   };
 
   return (
