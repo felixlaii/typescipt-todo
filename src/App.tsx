@@ -26,6 +26,11 @@ function App() {
     setTodos(updatedTodos);
   }
 
+  const editTodo: EditTodo = todoToEdit => {
+    let todoToUpdateIndex: number = todos.findIndex(todo => todo.text == todoToEdit.text);
+    console.log(todoToUpdateIndex);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
