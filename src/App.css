@@ -128,3 +128,15 @@ ul {
 .dropdown-list-btn:hover {
   background-color: #eaeaea;
 }
+
+.edit-input {
+  border: none;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
