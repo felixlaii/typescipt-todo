@@ -4,6 +4,16 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState<Array<Todo>>([]);
+  
+  const toggleComplete: ToggleComplete = selectedTodo => {
+    const updatedTodos = todos.map(todo => {
+      if (todo === selectedTodo) {
+        return { ...todo, complete: !todo.complete };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
   return (
     <div className="App">
